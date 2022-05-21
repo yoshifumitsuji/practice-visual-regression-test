@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "test": "jest",
+    "lite-server": "lite-server"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.5.1",
+    "@types/puppeteer": "^5.4.6",
+    "jest": "^28.1.0",
+    "jest-image-snapshot": "^4.5.1",
+    "jest-puppeteer": "^6.1.0",
+    "lite-server": "^2.6.1",
+    "puppeteer": "^14.1.1",
+    "ts-jest": "^28.0.2",
+    "typescript": "^4.6.4"
+  }
+}
