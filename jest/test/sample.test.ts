@@ -1,3 +1,6 @@
+const path = require('path');
+const fs = require('fs');
+
 describe('Sample test', () => {
   beforeEach(async () => {
     // テスト用WEBサイトにアクセスする
@@ -20,4 +23,13 @@ describe('Sample test', () => {
     const actual = await page.$eval('input[id="txt"]', (el) => (el as HTMLInputElement).value);
     expect(actual).toBe(inputText);
   });
+});
+
+it('test1.png ok', () => {
+  // test/test.pngを読み込む
+  const imagePath = path.join(process.cwd(), 'test/test.png');
+  const file = fs.readFileSync(imagePath);
+
+  // 読み込んだ画像データを比較
+  expect(file).toMatchImageSnapshot();
 });
